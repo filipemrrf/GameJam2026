@@ -2,17 +2,45 @@
 
 [ext_resource type="Script" uid="uid://creaw1lctst7q" path="res://ladreiro.gd" id="1_rbhw2"]
 [ext_resource type="Texture2D" uid="uid://badiub2b02xdv" path="res://Assets/ladreiro1.png" id="1_rh5q5"]
+[ext_resource type="Texture2D" uid="uid://bscwsaqnnl5ik" path="res://Assets/ladreiro-running-1.png" id="3_j2aup"]
+[ext_resource type="Texture2D" uid="uid://xy810qiae6n0" path="res://Assets/ladreiro-running-2.png" id="4_vqibu"]
+[ext_resource type="Texture2D" uid="uid://cw6spfuq5pwtm" path="res://Assets/ladreiro-running-3.png" id="5_bu4cv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbhw2"]
-size = Vector2(560, 338)
+size = Vector2(328, 195)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hjbf4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rh5q5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j2aup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vqibu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bu4cv")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
 
 [node name="Ladreiro" type="CharacterBody2D" unique_id=1890359345]
 script = ExtResource("1_rbhw2")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=451807731]
-position = Vector2(-2, 3)
-texture = ExtResource("1_rh5q5")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1455226544]
-position = Vector2(-3, 0)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_rbhw2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514827323]
+sprite_frames = SubResource("SpriteFrames_hjbf4")
+animation = &"idle"
