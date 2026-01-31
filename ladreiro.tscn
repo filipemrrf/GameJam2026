@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ed3bq8r73fnq"]
+
+[ext_resource type="Script" uid="uid://creaw1lctst7q" path="res://ladreiro.gd" id="1_rbhw2"]
+[ext_resource type="Texture2D" uid="uid://badiub2b02xdv" path="res://Assets/ladreiro1.png" id="1_rh5q5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbhw2"]
+size = Vector2(560, 338)
+
+[node name="Ladreiro" type="CharacterBody2D" unique_id=1890359345]
+script = ExtResource("1_rbhw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=451807731]
+position = Vector2(-2, 3)
+texture = ExtResource("1_rh5q5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1455226544]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_rbhw2")
