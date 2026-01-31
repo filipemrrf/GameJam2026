@@ -37,3 +37,7 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = true
 
 	move_and_slide()
+
+
+func _on_timer_timeout() -> void:
+	$AudioStreamPlayer2D.play()
