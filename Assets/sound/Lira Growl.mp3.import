@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cedy5rl8ostuh"
+path="res://.godot/imported/Lira Growl.mp3-a06f220dd012d414f293b87bb03d9c8b.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound/Lira Growl.mp3"
+dest_files=["res://.godot/imported/Lira Growl.mp3-a06f220dd012d414f293b87bb03d9c8b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
