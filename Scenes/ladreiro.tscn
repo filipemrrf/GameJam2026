@@ -1,13 +1,28 @@
 [gd_scene format=3 uid="uid://ed3bq8r73fnq"]
 
 [ext_resource type="Script" uid="uid://creaw1lctst7q" path="res://Scripts/ladreiro.gd" id="1_rbhw2"]
-[ext_resource type="Texture2D" uid="uid://badiub2b02xdv" path="res://Assets/ladreiro1.png" id="1_rh5q5"]
+[ext_resource type="Texture2D" uid="uid://bk5ycojto7rl2" path="res://Assets/ladreiro1.png" id="1_rh5q5"]
+[ext_resource type="Texture2D" uid="uid://d1akvxmfwjjab" path="res://Assets/ladreiro1-mask.png" id="3_48upn"]
 [ext_resource type="Texture2D" uid="uid://bscwsaqnnl5ik" path="res://Assets/ladreiro-running-1.png" id="3_j2aup"]
+[ext_resource type="Texture2D" uid="uid://c36x8kp8lds8a" path="res://Assets/ladreiro-peeing1.png" id="4_mqd7m"]
 [ext_resource type="Texture2D" uid="uid://xy810qiae6n0" path="res://Assets/ladreiro-running-2.png" id="4_vqibu"]
 [ext_resource type="Texture2D" uid="uid://cw6spfuq5pwtm" path="res://Assets/ladreiro-running-3.png" id="5_bu4cv"]
+[ext_resource type="Texture2D" uid="uid://jnhk8i3vap4g" path="res://Assets/ladreiro-peeing2.png" id="5_pnvy7"]
+[ext_resource type="Texture2D" uid="uid://dd3ovy4s7kor3" path="res://Assets/ladreiro-peeing3.png" id="6_5v0c1"]
+[ext_resource type="Texture2D" uid="uid://ddxjdbcoarq7a" path="res://Assets/ladreiro-peeing4.png" id="7_pss81"]
+[ext_resource type="Texture2D" uid="uid://bel2l5q1djfrs" path="res://Assets/ladreiro-running-1-mask.png" id="8_e6u0b"]
+[ext_resource type="Texture2D" uid="uid://gy7oq3bvkqnl" path="res://Assets/ladreiro-peeing5.png" id="8_e7giy"]
+[ext_resource type="Texture2D" uid="uid://d3bp6sheetrce" path="res://Assets/ladreiro-running-2-mask.png" id="9_ck5kq"]
+[ext_resource type="Texture2D" uid="uid://bqob4spek5epv" path="res://Assets/ladreiro-running-3-mask.png" id="10_1tdki"]
+[ext_resource type="Texture2D" uid="uid://b0nahmn0w1y7g" path="res://Assets/ladreiro-running-1-mask2.png" id="13_8tkxj"]
+[ext_resource type="Texture2D" uid="uid://c7s6usqmfsk2y" path="res://Assets/ladreiro-running-2-mask2.png" id="14_0t7c0"]
+[ext_resource type="Texture2D" uid="uid://bjv6ijwf8vc4m" path="res://Assets/ladreiro-running-3-mask2.png" id="15_6w7g6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbhw2"]
-size = Vector2(328, 195)
+size = Vector2(253, 172)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pss81"]
+load_path = "res://.godot/imported/ladreiro-with-mask2.png-a54e4df380defb0ac55cac6ae5b24d1b.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjbf4"]
 animations = [{
@@ -17,6 +32,54 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_pss81")
+}],
+"loop": true,
+"name": &"idle_drunk_mask",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_48upn")
+}],
+"loop": true,
+"name": &"idle_fog_mask",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mqd7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pnvy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5v0c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pss81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e7giy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pss81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e7giy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pss81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e7giy")
+}],
+"loop": true,
+"name": &"pee",
 "speed": 5.0
 }, {
 "frames": [{
@@ -32,15 +95,43 @@ animations = [{
 "loop": true,
 "name": &"running",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_8tkxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0t7c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6w7g6")
+}],
+"loop": true,
+"name": &"running_drunk_mask",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_e6u0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ck5kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1tdki")
+}],
+"loop": true,
+"name": &"running_fog_mask",
+"speed": 5.0
 }]
 
 [node name="Ladreiro" type="CharacterBody2D" unique_id=1890359345]
 script = ExtResource("1_rbhw2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1455226544]
-position = Vector2(0, 0.5)
+position = Vector2(20.5, 0)
 shape = SubResource("RectangleShape2D_rbhw2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514827323]
 sprite_frames = SubResource("SpriteFrames_hjbf4")
-animation = &"idle"
+animation = &"idle_drunk_mask"

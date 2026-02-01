@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2sm5l1ig1ts7"]
 
-[ext_resource type="Texture2D" uid="uid://denkbedef5fo5" path="res://Assets/main_menu_background.png" id="1_28flt"]
 [ext_resource type="Script" uid="uid://cpio1xek06kwm" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://2mk8arusvdni" path="res://Assets/Gemini_Generated_Image_8hap158hap158hap.png" id="2_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://c5poa4ak37xed" path="res://Assets/StartButton.png" id="3_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://dx8ed3brcsgyq" path="res://Assets/StartSelected.png" id="4_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://bn0kd1cpafu5u" path="res://Assets/Quit.png" id="5_trj04"]
@@ -13,9 +13,9 @@ script = ExtResource("1_48xlc")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1045399720]
 z_index = -10
-position = Vector2(959.99994, 540.5)
-scale = Vector2(1.8767124, 1.2920673)
-texture = ExtResource("1_28flt")
+position = Vector2(960.50006, 541)
+scale = Vector2(1.8172349, 1.092742)
+texture = ExtResource("2_cp0ys")
 
 [node name="ButtonManager" type="Control" parent="." unique_id=1990370291]
 layout_mode = 3
@@ -25,28 +25,27 @@ offset_bottom = 40.0
 
 [node name="Start" type="TextureButton" parent="ButtonManager" unique_id=1423216745]
 layout_mode = 0
-offset_left = 1188.0
-offset_top = 257.0
-offset_right = 1548.0
-offset_bottom = 378.0
-scale = Vector2(1.2113062, 1.4539195)
+offset_left = 820.00006
+offset_top = 279.0
+offset_right = 1180.0
+offset_bottom = 400.0
+scale = Vector2(0.89712024, 1.076805)
 texture_normal = ExtResource("3_cp0ys")
 texture_hover = ExtResource("4_yhxw7")
 
 [node name="Quit" type="TextureButton" parent="ButtonManager" unique_id=573473918]
 layout_mode = 0
-offset_left = 1186.0
-offset_top = 590.0
-offset_right = 1520.0
-offset_bottom = 720.0
-scale = Vector2(1.3138243, 1.341077)
+offset_left = 829.0
+offset_top = 634.00006
+offset_right = 1163.0
+offset_bottom = 764.00006
+scale = Vector2(0.96433085, 0.984334)
 texture_normal = ExtResource("5_trj04")
 texture_hover = ExtResource("6_16hvj")
 
 [node name="LadreiroFace" type="Sprite2D" parent="." unique_id=675366437]
-position = Vector2(686, 501)
-rotation = -0.23212878
-scale = Vector2(2, 2)
+position = Vector2(981, 511)
+scale = Vector2(0.52308357, 0.5315353)
 texture = ExtResource("7_vr1f0")
 
 [connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
