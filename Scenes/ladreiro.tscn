@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ed3bq8r73fnq"]
 
-[ext_resource type="Script" uid="uid://creaw1lctst7q" path="res://ladreiro.gd" id="1_rbhw2"]
+[ext_resource type="Script" uid="uid://creaw1lctst7q" path="res://Scripts/ladreiro.gd" id="1_rbhw2"]
 [ext_resource type="Texture2D" uid="uid://badiub2b02xdv" path="res://Assets/ladreiro1.png" id="1_rh5q5"]
 [ext_resource type="Texture2D" uid="uid://bscwsaqnnl5ik" path="res://Assets/ladreiro-running-1.png" id="3_j2aup"]
 [ext_resource type="Texture2D" uid="uid://xy810qiae6n0" path="res://Assets/ladreiro-running-2.png" id="4_vqibu"]
